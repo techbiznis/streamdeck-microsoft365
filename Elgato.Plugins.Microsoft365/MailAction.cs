@@ -43,7 +43,7 @@ public class MailAction : GraphAction<MailPluginSettings>
             .GetAsync();
 
         if (result != null)
-            Process.Start(new ProcessStartInfo { FileName = $"https://outlook.live.com/mail/{result.Id}", UseShellExecute = true });
+            Process.Start(new ProcessStartInfo { FileName = $"https://outlook.office.com/mail/{result.Id}", UseShellExecute = true });
 
         await TryUpdateBadge(true);
     }
